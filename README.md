@@ -159,4 +159,4 @@ O objetivo é apresentar a arquitetura da solução, sua interface e os resultad
 
 GitHub: https://github.com/HigorSouzaBatista
 
-LinkedIn: *(adicione o link do seu perfil)*
+LinkedIn: https://www.linkedin.com/in/higorsouza-analistadedados/
