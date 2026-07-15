@@ -2,19 +2,21 @@
 
 Sistema desenvolvido em **Python** para automatizar a conferência de dados em processos de conversão entre sistemas de folha de pagamento.
 
-A aplicação realiza a extração, comparação e validação de informações entre diferentes bases de dados, identificando divergências e gerando relatórios técnicos para auxiliar equipes durante processos de migração de sistemas.
+A aplicação realiza a extração, comparação e validação de informações entre diferentes bases de dados, identificando divergências e gerando relatórios técnicos que auxiliam equipes durante projetos de migração de sistemas.
 
-> ⚠️ Este repositório representa uma versão de portfólio. Algumas regras de negócio, consultas SQL e informações específicas foram omitidas por questões de confidencialidade.
+> **🔒 Código-fonte**
+>
+> Este repositório tem como objetivo apresentar o projeto desenvolvido. O código-fonte completo não é disponibilizado publicamente por conter integrações, consultas SQL e regras de negócio desenvolvidas para ambiente corporativo.
 
 ---
 
-# Interface
+# Interface da Aplicação
 
 ## Menu Principal
 
 ![Tela Principal](images/tela_principal.png)
 
-Tela inicial da aplicação, onde o usuário escolhe o sistema de origem dos dados (SAGE ou Consisanet) e inicia o processo de conferência.
+Tela inicial da aplicação responsável por centralizar todas as funcionalidades do sistema.
 
 ---
 
@@ -22,12 +24,12 @@ Tela inicial da aplicação, onde o usuário escolhe o sistema de origem dos dad
 
 ![Extração](images/conexao&extracao.png)
 
-Nesta etapa o sistema:
+Nesta etapa o sistema realiza:
 
-- Lê o arquivo de relacionamento das empresas
-- Conecta aos bancos de dados
-- Executa dezenas de consultas SQL
-- Gera automaticamente os arquivos utilizados na comparação
+- Seleção das empresas
+- Conexão com os bancos de dados
+- Execução das consultas SQL
+- Geração automática dos arquivos necessários para conferência
 
 ---
 
@@ -35,60 +37,44 @@ Nesta etapa o sistema:
 
 ![Processamento](images/processamento.png)
 
-Após a extração, a aplicação executa automaticamente todas as fases da conferência, gerando:
+O processamento executa automaticamente todas as fases da conferência, apresentando ao usuário um resumo completo da execução.
 
-- Comparações
-- Divergências
-- Relatórios
-- Resumo final do processamento
+Entre as verificações realizadas:
+
+- Empresas
+- Empregados
+- Férias
+- Alterações Salariais
+- Horários
+- eSocial
+- Responsáveis Legais
+- Demais cadastros utilizados durante a conversão
 
 ---
 
 ## Estrutura dos Resultados
 
-![Resultados](images/estrutura.png)
+![Estrutura](images/estrutura.png)
 
-Todos os arquivos gerados são organizados automaticamente em pastas, facilitando a análise dos resultados.
+Após o processamento, todos os arquivos são organizados automaticamente em uma estrutura padronizada contendo:
 
----
-
-# Funcionalidades
-
-- Comparação de Empresas
-- Comparação de Empregados
-- Comparação de Férias
-- Comparação de Alterações Salariais
-- Comparação de Horários
-- Comparação de Eventos do eSocial
-- Comparação de Responsáveis Legais
-- Comparação de Serviços e Obras
-- Geração automática de relatórios em Excel
-- Dashboard com indicadores de processamento
-- Organização automática dos arquivos por empresa
-- Tratamento de divergências entre sistemas
+- Relatórios
+- Logs
+- Arquivos auxiliares
+- Resumos da conferência
 
 ---
 
-# Fluxo do Processo
+# Principais Funcionalidades
 
-```text
-Sistema de Origem
-        │
-        ▼
-Extração dos Dados
-        │
-        ▼
-Tratamento
-        │
-        ▼
-Comparação
-        │
-        ▼
-Relatórios
-        │
-        ▼
-Resumo Final
-```
+- Comparação automática entre sistemas
+- Extração de dados diretamente dos bancos
+- Identificação de divergências
+- Consolidação dos resultados
+- Geração de relatórios em Excel
+- Organização automática dos arquivos
+- Interface gráfica para utilização pelos técnicos
+- Suporte a múltiplas etapas da conferência
 
 ---
 
@@ -106,60 +92,62 @@ Resumo Final
 
 ---
 
-# Estrutura do Projeto
+# Fluxo do Sistema
 
 ```text
-app/
-├── banco/
-├── comum/
-├── consisanet/
-├── interface/
-├── sage/
-└── servico/
-
-scripts/
-├── FASE1_EMPRESA
-├── FASE2_EMPREGADOS
-├── FASE3_FERIAS
-├── FASE4_ALTERACOES_SALARIAIS
-└── FASE5_HORARIOS
-
-images/
-
-requirements.txt
-README.md
+Banco de Dados
+      │
+      ▼
+Extração
+      │
+      ▼
+Tratamento
+      │
+      ▼
+Comparação
+      │
+      ▼
+Relatórios
+      │
+      ▼
+Resumo Final
 ```
 
 ---
 
 # Objetivo
 
-Automatizar processos de conferência de dados durante migrações entre sistemas, reduzindo o tempo de análise manual e aumentando a confiabilidade das validações realizadas.
+Automatizar processos de conferência de dados durante conversões entre sistemas de folha de pagamento, reduzindo atividades manuais, aumentando a produtividade e fornecendo maior confiabilidade aos resultados obtidos.
 
 ---
 
-# Diferenciais do Projeto
+# Diferenciais
 
-- Interface gráfica intuitiva
-- Arquitetura modular
-- Automatização de processos repetitivos
-- Comparação entre múltiplos sistemas
-- Geração automática de relatórios
-- Organização dos resultados por empresa
-- Projeto desenvolvido para utilização em ambiente corporativo
+✔ Interface gráfica intuitiva
+
+✔ Processamento automatizado
+
+✔ Organização automática dos resultados
+
+✔ Geração de relatórios técnicos
+
+✔ Estrutura modular
+
+✔ Aplicação desenvolvida para ambiente corporativo
 
 ---
 
 # Observações
 
-Por questões de confidencialidade, este repositório não contém:
+Por questões de confidencialidade, este repositório **não contém**:
 
-- Bases de dados utilizadas em produção
-- Consultas SQL proprietárias
+- Código-fonte completo
+- Consultas SQL utilizadas em produção
+- Bases de dados
 - Informações de clientes
 - Regras de negócio específicas
 
-O objetivo é demonstrar a arquitetura, a organização do projeto e as tecnologias utilizadas durante o desenvolvimento.
+O objetivo é apresentar a arquitetura da solução, sua interface e os resultados obtidos durante o desenvolvimento.
 
 ---
 
@@ -167,8 +155,8 @@ O objetivo é demonstrar a arquitetura, a organização do projeto e as tecnolog
 
 ## Higor Batista de Souza
 
-Analista de Sistemas | Desenvolvedor Python | SQL | Automação de Processos | Banco de Dados
-
-LinkedIn: https://www.linkedin.com/in/higorsouza-analistadedados/
+**Analista de Sistemas • Desenvolvedor Python • SQL • Automação de Processos**
 
 GitHub: https://github.com/HigorSouzaBatista
+
+LinkedIn: *(adicione o link do seu perfil)*
